@@ -1,23 +1,51 @@
 import logo from './logo.svg';
-import './App.css';
+import ProfileCard from './components/ProfileCard'
+import 'bulma/css/bulma.css'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <p class="title">
+            Hero title
+          </p>
+          <p class="subtitle">
+            Hero subtitle
+          </p>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-4">
+              <ProfileCard
+                image={logo}
+                title="React"
+                handle="@react99"
+                description="React was created by Facebook"
+              />
+            </div>
+            <div className="column is-4">
+              <ProfileCard
+                image={logo}
+                title="React"
+                handle="@react99"
+                description="React was created by Facebook"
+              />
+            </div>
+            <div className="column is-4">
+              <ProfileCard
+                image={logo}
+                title="React"
+                handle="@react99"
+                description="React was created by Facebook"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
